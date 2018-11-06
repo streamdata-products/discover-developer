@@ -1,2 +1,5 @@
-# discover-developer
-This is the developer area for the discover product.
+#Streamdata API Gallery
+
+This is a gallery of APIs organized by Streamdata.io.
+
+You can view at: http://api.gallery.streamdata.io.
