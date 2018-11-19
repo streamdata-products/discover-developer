@@ -5758,159 +5758,29 @@ securityDefinitions:
     name: "x-api-key"
     in: "header"
 definitions:
-  ArrayOfcontact:
-    type: "array"
-    items:
-      $ref: "#/definitions/contact"
-  type:
+  contracts:
+    description: A listing of contracts
     properties:
-      type_id:
-        type: "integer"
-        description: "The unique id for the type."
-      type:
-        type: "string"
-        description: "The type of the type."
-      name:
-        type: "string"
-        description: "The name of the type."
-      slug:
-        type: "string"
-        description: "The slug of the type."
-      description:
-        type: "string"
-        description: "The description of the type."
-    description: "Tags for use across collections and APIs."
-  ArrayOfopenapi:
-    type: "array"
-    items:
-      $ref: "#/definitions/openapi"
-  ArrayOfapi:
-    type: "array"
-    items:
-      $ref: "#/definitions/api"
-  ArrayOfenum:
-    type: "array"
-    items:
-      $ref: "#/definitions/enum"
-  ArrayOftag:
-    type: "array"
-    items:
-      $ref: "#/definitions/tag"
-  path:
-    properties:
-      path:
-        type: "object"
-        description: "The path."
-        properties: {}
-    description: "The server object."
-  ArrayOfpath:
-    type: "array"
-    items:
-      $ref: "#/definitions/path"
-  contact:
-    properties:
-      name:
-        type: "string"
-        description: "The identifying name of the contact person/organization."
-      url:
-        type: "string"
-        description: "The URL pointing to the contact information. MUST be in the\
-          \ format of a URL."
-      email:
-        type: "string"
-        description: "The email address of the contact person/organization. MUST be\
-          \ in the format of an email address."
-    description: "Contact information for this contract."
-  property:
-    properties:
-      property_id:
-        type: "integer"
-        description: "The unique id for the property."
-      api_id:
-        type: "integer"
-        description: "The unique id for the property."
-      type:
-        type: "string"
-        description: "The type for the property."
-      url:
-        type: "string"
-        description: "The URL for the property."
-    description: "The API property."
-  api:
-    properties:
-      api_id:
-        type: "integer"
-        description: "The unique id for the API."
-      collection_id:
-        type: "integer"
-        description: "The collection id for the API."
-      name:
-        type: "integer"
-        description: "The name for the API."
-      slug:
-        type: "integer"
-        description: "The slug for the API."
-      description:
-        type: "integer"
-        description: "The description for the API."
-      image:
-        type: "integer"
-        description: "The image for the API."
-      human_url:
-        type: "integer"
-        description: "The human URL for the API."
-      base_url:
-        type: "integer"
-        description: "The base URL for the API."
-      properties:
+      contract:
         type: "array"
         items:
-          $ref: "#/definitions/property"
-      tags:
-        type: "array"
-        items:
-          $ref: "#/definitions/tag"
-    description: "Individual APIs."
-  tag:
-    properties:
-      openapi_id:
-        type: "integer"
-        description: "The unique id for the OpenAPI signal."
-    description: "Individual server object."
-  ArrayOfinfo:
-    type: "array"
-    items:
-      $ref: "#/definitions/info"
-  info:
-    properties:
-      info_id:
-        type: "integer"
-        description: "The uniqud for the info object."
-    description: "The info object."
-  ArrayOferrorResponse:
-    type: "array"
-    items:
-      $ref: "#/definitions/errorResponse"
-  openapi:
-    properties:
-      openapi_id:
-        type: "integer"
-        description: "The unique id for the OpenAPI signal."
-    description: "Individual server object."
-  contract:
+          $ref: "#/definitions/contract"
     required:
-    - "openapi"
+      - id
+      - name
+  contract:
+    description: An individual OpenAPI contract.
     properties:
       contract_id:
-        type: "integer"
-        description: "The uniqud for the OpenAPI contract."
+        description: The uniqud for the OpenAPI contract.
+        type: integer
       openapi:
-        type: "string"
-        description: "This string MUST be the semantic version number of the OpenAPI\
-          \ Specification version that the OpenAPI document uses."
+        description: This string MUST be the semantic version number of the OpenAPI Specification version that the OpenAPI document uses.
+        type: string
       info:
         type: "object"
-        properties: {}
+        items:
+          $ref: "#/definitions/info"
       servers:
         type: "array"
         items:
@@ -5925,574 +5795,539 @@ definitions:
           $ref: "#/definitions/component"
       security:
         type: "object"
-        properties: {}
+        items:
+          $ref: "#/definitions/security"
       tags:
         type: "array"
         items:
           $ref: "#/definitions/tag"
-    description: "An individual OpenAPI contract."
-  collection:
-    properties:
-      collection_id:
-        type: "integer"
-        description: "The unique id for the OpenAPI signal."
-      name:
-        type: "string"
-        description: "The name for the collection."
-      slug:
-        type: "string"
-        description: "The slug for the OpenAPI signal."
-      image:
-        type: "string"
-        description: "The image for the OpenAPI signal."
-      rank:
-        type: "integer"
-        description: "The rank for the OpenAPI signal."
-      alexa_rank:
-        type: "integer"
-        description: "The alexa_rank for the OpenAPI signal."
-      created:
-        type: "string"
-        description: "The created for the OpenAPI signal."
-      modified:
-        type: "string"
-        description: "The modified for the OpenAPI signal."
-      url:
-        type: "string"
-        description: "The url for the OpenAPI signal."
-      apis:
-        type: "array"
-        items:
-          $ref: "#/definitions/api"
-      tags:
-        type: "array"
-        items:
-          $ref: "#/definitions/tag"
-      includes:
-        type: "array"
-        items:
-          $ref: "#/definitions/include"
-    description: "Individual collections."
-  ArrayOfheader:
-    type: "array"
-    items:
-      $ref: "#/definitions/header"
-  ArrayOfqueue:
-    type: "array"
-    items:
-      $ref: "#/definitions/queue"
-  ArrayOfserver:
-    type: "array"
-    items:
-      $ref: "#/definitions/server"
-  enum:
-    properties:
-      value:
-        type: "string"
-        description: "The enum value."
-    description: "The enum object."
-  ArrayOftype:
-    type: "array"
-    items:
-      $ref: "#/definitions/type"
-  license:
-    properties:
-      name:
-        type: "string"
-        description: "The license name used for the API."
-      url:
-        type: "string"
-        description: "A URL to the license used for the API. MUST be in the format\
-          \ of a URL."
-    description: "License information for this contract."
-  ArrayOfproperty:
-    type: "array"
-    items:
-      $ref: "#/definitions/property"
-  ArrayOfrequestBody:
-    type: "array"
-    items:
-      $ref: "#/definitions/requestBody"
-  ArrayOflicense:
-    type: "array"
-    items:
-      $ref: "#/definitions/license"
-  header:
-    properties:
-      name:
-        type: "string"
-        description: "The name of the parameter. Parameter names are case sensitive."
-      in:
-        type: "string"
-        description: "The location of the parameter. Possible values are only \"header\"\
-          ."
-      description:
-        type: "string"
-        description: "A brief description of the parameter."
-      required:
-        type: "integer"
-        description: "Determines whether this parameter is mandatory."
-      deprecated:
-        type: "integer"
-        description: "Specifies that a parameter is deprecated and SHOULD be transitioned\
-          \ out of usage."
-      allowEmptyValue:
-        type: "integer"
-        description: "Sets the ability to pass empty-valued parameters."
-      style:
-        type: "string"
-        description: "Describes how the parameter value will be serialized depending\
-          \ on the type of the parameter value."
-      explode:
-        type: "integer"
-        description: "When this is true, parameter values of type array or object\
-          \ generate separate parameters for each value of the array or key-value\
-          \ pair of the map."
-      allowReserved:
-        type: "integer"
-        description: "Determines whether the parameter value SHOULD allow reserved\
-          \ characters, as defined by RFC3986"
-      schema:
-        type: "object"
-        description: "Example of the media type."
-        properties: {}
-      examples:
-        type: "object"
-        description: "Examples of the media type."
-        properties: {}
-    description: "The header object."
-  ArrayOfserverVariable:
-    type: "array"
-    items:
-      $ref: "#/definitions/serverVariable"
-  schema:
     required:
-    - "title"
-    - "type"
+      - id
+      - openapi
+  info:
+    description: The info object.
     properties:
-      schema_id:
-        type: "integer"
-        description: "The unique id for the schema."
-      title:
-        type: "string"
-        description: "The title of the schema."
-      multipleOf:
-        type: "integer"
-        description: "The multipleOf of the schema."
-      maximum:
-        type: "integer"
-        description: "The maximum of the schema."
-      exclusiveMaximum:
-        type: "integer"
-        description: "The exclusiveMaximum of the schema."
-      minimum:
-        type: "integer"
-        description: "The minimum of the schema."
-      exclusiveMinimum:
-        type: "integer"
-        description: "The exclusiveMinimum of the schema."
-      maxLength:
-        type: "integer"
-        description: "The maxLength of the schema."
-      minLength:
-        type: "integer"
-        description: "The minLength of the schema."
-      pattern:
-        type: "string"
-        description: "The pattern of the schema."
-      maxItems:
-        type: "integer"
-        description: "The maxItems of the schema."
-      minItems:
-        type: "integer"
-        description: "The minItems of the schema."
-      uniqueItems:
-        type: "integer"
-        description: "The uniqueItems of the schema."
-      maxProperties:
-        type: "integer"
-        description: "The maxProperties of the schema."
-      minProperties:
-        type: "integer"
-        description: "The minProperties of the schema."
-      type:
-        type: "string"
-        description: "The type of the schema."
-      description:
-        type: "string"
-        description: "The description of the schema."
-      format:
-        type: "string"
-        description: "The format of the schema."
-      default:
-        type: "string"
-        description: "The default of the schema."
-      allOf:
-        type: "object"
-        description: "The description of the schema."
-        properties: {}
-      oneOf:
-        type: "object"
-        description: "The description of the schema."
-        properties: {}
-      anyOf:
-        type: "object"
-        description: "The description of the schema."
-        properties: {}
-      not:
-        type: "object"
-        description: "The description of the schema."
-        properties: {}
-      items:
-        type: "object"
-        description: "The description of the schema."
-        properties: {}
-      properties:
-        type: "object"
-        description: "The description of the schema."
-        properties: {}
-      additionalProperties:
-        type: "object"
-        description: "The description of the schema."
-        properties: {}
-    description: "The schema object."
+      info_id:
+        description: The uniqud for the info object.
+        type: integer
   server:
+    description: Individual server object.
     properties:
       server_id:
-        type: "integer"
-        description: "The unique server id."
+        type: integer
+        description: The unique server id.
       url:
-        type: "string"
-        title: "The URL of the server."
+        type: string
+        title: The URL of the server.
       description:
-        type: "string"
-        title: "The description for the server."
-    description: "Individual server object."
-  link:
+        type: string
+        title: The description for the server.
+  path:
+    description: The server object.
     properties:
-      operationRef:
-        type: "string"
-        description: "A relative or absolute reference to an OAS operation."
-      operationId:
-        type: "string"
-        description: "The name of an existing, resolvable OAS operation, as defined\
-          \ with a unique operationId."
-      parameters:
-        type: "string"
-        description: "A map representing parameters to pass to an operation as specified\
-          \ with operationId or identified via operationRef."
-      requestBody:
-        type: "string"
-        description: "A literal value or {expression} to use as a request body when\
-          \ calling the target operation."
-      description:
-        type: "string"
-        description: "A description of the link."
-      server:
+      path:
+        description: The path.
         type: "object"
-        description: "A server object to be used by the target operation."
-        properties: {}
-    description: "The link object."
-  ArrayOfparameter:
-    type: "array"
-    items:
-      $ref: "#/definitions/parameter"
-  ArrayOfsecurityScheme:
-    type: "array"
-    items:
-      $ref: "#/definitions/securityScheme"
-  contracts:
-    properties:
-      contract:
-        type: "array"
         items:
-          $ref: "#/definitions/contract"
-    description: "A listing of contracts"
-  error:
+          $ref: "#/definitions/pathItem"
+  pathItem:
+    description: Individual path item.
     properties:
-      code:
-        type: "integer"
-        description: "Repeat the HTTP status code"
-      message:
-        type: "integer"
-        description: "A plain language message explaining the error"
-    description: "Describes an HTTP error returned"
-  example:
+      path:
+        description: The operation.
+        type: "object"
+        items:
+          $ref: "#/definitions/operation"
+  operation:
+    description: The contact object.
     properties:
+      tags:
+        type: array
+        title: The tags for the operation.
+        items:
+          $ref: "#/definitions/tag"
       summary:
-        type: "string"
-        description: "Short description for the example."
-      description:
-        type: "string"
-        description: "Long description for the example."
-      value:
-        type: "string"
-        description: "Any  Embedded literal example."
-      externalValue:
-        type: "string"
-        description: "A URL that points to the literal example."
-    description: "The example object."
-  ArrayOfcallback:
-    type: "array"
-    items:
-      $ref: "#/definitions/callback"
-  ArrayOfresponse:
-    type: "array"
-    items:
-      $ref: "#/definitions/response"
-  ArrayOfcontracts:
-    type: "array"
-    items:
-      $ref: "#/definitions/contracts"
-  requestBody:
-    properties:
-      summary:
-        type: "string"
-        description: "Short description for the example."
-      content:
-        type: "object"
-        description: "The content of the request body."
-        properties: {}
-      required:
-        type: "integer"
-        description: "Determines if the request body is required in the request."
-    description: "The requestBody object."
-  parameter:
-    properties:
-      in:
-        type: "string"
-        description: "The location of the parameter. Possible values are \"query\"\
-          , \"header\", \"path\" or \"cookie\"."
-      name:
-        type: "string"
-        description: "The name of the parameter. Parameter names are case sensitive."
-      description:
-        type: "string"
-        description: "A brief description of the parameter."
-      required:
-        type: "integer"
-        description: "Determines whether this parameter is mandatory."
-      deprecated:
-        type: "integer"
-        description: "Specifies that a parameter is deprecated and SHOULD be transitioned\
-          \ out of usage."
-      allowEmptyValue:
-        type: "integer"
-        description: "Sets the ability to pass empty-valued parameters."
-      style:
-        type: "string"
-        description: "Describes how the parameter value will be serialized depending\
-          \ on the type of the parameter value."
-      explode:
-        type: "integer"
-        description: "When this is true, parameter values of type array or object\
-          \ generate separate parameters for each value of the array or key-value\
-          \ pair of the map."
-      allowReserved:
-        type: "integer"
-        description: "Determines whether the parameter value SHOULD allow reserved\
-          \ characters, as defined by RFC3986"
-      schema:
-        type: "object"
-        description: "Example of the media type."
-        properties: {}
-      examples:
-        type: "object"
-        description: "Examples of the media type."
-        properties: {}
-    description: "The parameter object."
-  ArrayOfcontract:
-    type: "array"
-    items:
-      $ref: "#/definitions/contract"
-  ArrayOrganization:
-    type: "array"
-    items:
-      $ref: "#/definitions/user"
-  include:
-    properties:
-      include_id:
-        type: "integer"
-        description: "The unique id for the included collection."
-      name:
-        type: "string"
-        description: "The name of the included collection."
-      url:
-        type: "string"
-        description: "The url of the included collection."
-    description: "Included collections."
-  ArrayOfexample:
-    type: "array"
-    items:
-      $ref: "#/definitions/example"
-  ArrayOfcollection:
-    type: "array"
-    items:
-      $ref: "#/definitions/collection"
-  ArrayOflink:
-    type: "array"
-    items:
-      $ref: "#/definitions/link"
-  ArrayOfschema:
-    type: "array"
-    items:
-      $ref: "#/definitions/schema"
-  errorResponse:
-    properties:
-      code:
-        type: "integer"
-        description: "Repeat the HTTP status code"
-      message:
-        type: "integer"
-        description: "A plain language message explaining the error"
-    description: "Describes an HTTP error returned"
+        type: string
+        title: The summary for the operation.
+        default: ''
+      operationId:
+        type: string
+        title: The unique operation id.
+      parameters:
+        type: array
+        title: The parameters for the operation.
+        items:
+          $ref: "#/definitions/parameter"
+      requestBody:
+        type: object
+        title: The request bodies for this operation.
+        items:
+          $ref: "#/definitions/requestBody"
+      responses:
+        type: object
+        title: The responses for this operation.
+        items:
+          $ref: "#/definitions/response"
+      security:
+        type: array
+        title: The security scheme.
+        items:
+          $ref: "#/definitions/securityScheme"
   component:
+    description: The server object.
     properties:
       schemas:
+        description: The server object.
         type: "array"
-        description: "The server object."
         items:
           $ref: "#/definitions/schema"
       responses:
+        description: The server object.
         type: "array"
-        description: "The server object."
         items:
           $ref: "#/definitions/response"
       parameters:
+        description: The server object.
         type: "array"
-        description: "The server object."
         items:
           $ref: "#/definitions/parameter"
       examples:
+        description: The server object.
         type: "array"
-        description: "The server object."
         items:
           $ref: "#/definitions/example"
       requestBodies:
+        description: The server object.
         type: "array"
-        description: "The server object."
         items:
           $ref: "#/definitions/requestBody"
       headers:
+        description: The server object.
         type: "array"
-        description: "The server object."
         items:
           $ref: "#/definitions/header"
       securitySchemes:
+        description: The server object.
         type: "array"
-        description: "The server object."
         items:
           $ref: "#/definitions/securityScheme"
       links:
+        description: The server object.
         type: "array"
-        description: "The server object."
         items:
           $ref: "#/definitions/link"
       callbacks:
+        description: The server object.
         type: "array"
-        description: "The server object."
         items:
           $ref: "#/definitions/callback"
-    description: "The server object."
-  serverVariable:
+  security:
+    description: The server object.
     properties:
-      description:
-        type: "string"
-        description: "An optional description for the server variable."
-      default:
-        type: "string"
-        description: "The default value to use for substitution, and to send, if an\
-          \ alternate value is not supplied."
-      enum:
-        type: "string"
-        description: "An enumeration of string values to be used if the substitution\
-          \ options are from a limited set."
-    description: "The contact object."
-  response:
-    properties:
-      description:
-        type: "string"
-        description: "A short description of the response."
-      headers:
-        type: "object"
-        description: "The headers for the response."
-        properties: {}
-      content:
-        type: "object"
-        description: "The content for the response."
-        properties: {}
-      links:
-        type: "object"
-        description: "The links for the response."
-        properties: {}
-    description: "The response object."
-  organization:
-    properties:
+      security_id:
+        description: The uniqud for the info object.
+        type: integer
       name:
-        type: "string"
-        description: "The name of the organization."
-      description:
-        type: "string"
-        description: "The description of the organization."
-    description: "Organizatns for managing collections and contracts."
-  securityScheme:
+        description: The name of the security definition.
+        type: string
+  tag:
+    description: List of tags.
     properties:
+      info_id:
+        description: The unique id for the tag.
+        type: integer
+      name:
+        description: The name of the tag.
+        type: string
+      description:
+        description: The description of the tag.
+        type: string
+  schema:
+    description: The schema object.
+    properties:
+      schema_id:
+        description: The unique id for the schema.
+        type: integer
+      title:
+        description: The title of the schema.
+        type: string
+      multipleOf:
+        description: The multipleOf of the schema.
+        type: integer
+      maximum:
+        description: The maximum of the schema.
+        type: integer
+      exclusiveMaximum:
+        description: The exclusiveMaximum of the schema.
+        type: integer
+      minimum:
+        description: The minimum of the schema.
+        type: integer
+      exclusiveMinimum:
+        description: The exclusiveMinimum of the schema.
+        type: integer
+      maxLength:
+        description: The maxLength of the schema.
+        type: integer
+      minLength:
+        description: The minLength of the schema.
+        type: integer
+      pattern:
+        description: The pattern of the schema.
+        type: string
+      maxItems:
+        description: The maxItems of the schema.
+        type: integer
+      minItems:
+        description: The minItems of the schema.
+        type: integer
+      uniqueItems:
+        description: The uniqueItems of the schema.
+        type: integer
+      maxProperties:
+        description: The maxProperties of the schema.
+        type: integer
+      minProperties:
+        description: The minProperties of the schema.
+        type: integer
       type:
-        type: "string"
-        description: "The type of the security scheme. Valid values are \"apiKey\"\
-          , \"http\", \"oauth2\", \"openIdConnect\"."
+        description: The type of the schema.
+        type: string
       description:
-        type: "string"
-        description: "A short description for security scheme."
-      name:
-        type: "string"
-        description: "The name of the header, query or cookie parameter to be used."
+        description: The description of the schema.
+        type: string
+      format:
+        description: The format of the schema.
+        type: string
+      default:
+        description: The default of the schema.
+        type: string
+      allOf:
+        description: The description of the schema.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+      oneOf:
+        description: The description of the schema.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+      anyOf:
+        description: The description of the schema.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+      not:
+        description: The description of the schema.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+      items:
+        description: The description of the schema.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+      properties:
+        description: The description of the schema.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+      additionalProperties:
+        description: The description of the schema.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+    required:
+      - title
+      - type
+  response:
+    description: The response object.
+    properties:
+      description:
+        description: A short description of the response.
+        type: string
+      headers:
+        description: The headers for the response.
+        type: "object"
+        items:
+          $ref: "#/definitions/header"
+      content:
+        description: The content for the response.
+        type: "object"
+        items:
+          $ref: "#/definitions/mediaType"
+      links:
+        description: The links for the response.
+        type: "object"
+        items:
+          $ref: "#/definitions/link"
+  parameter:
+    description: The parameter object.
+    properties:
       in:
-        type: "string"
-        description: "The location of the API key. Valid values are \"query\", \"\
-          header\" or \"cookie\"."
-      scheme:
-        type: "string"
-        description: "The name of the HTTP Authorization scheme to be used in the\
-          \ Authorization header as defined in RFC7235."
-      bearerFormat:
-        type: "string"
-        description: "A hint to the client to identify how the bearer token is formatted.\
-          \ Bearer tokens are usually generated by an authorization server, so this\
-          \ information is primarily for documentation purposes."
-      flows:
-        type: "string"
-        description: "An object containing configuration information for the flow\
-          \ types supported."
-      openIdConnectUrl:
-        type: "string"
-        description: "OpenId Connect URL to discover OAuth2 configuration values.\
-          \ This MUST be in the form of a URL."
-    description: "The contact object."
+        description: The location of the parameter. Possible values are "query", "header", "path" or "cookie".
+        type: string
+      name:
+        description: The name of the parameter. Parameter names are case sensitive.
+        type: string
+      description:
+        description: A brief description of the parameter.
+        type: string
+      required:
+        description: Determines whether this parameter is mandatory.
+        type: integer
+      deprecated:
+        description: Specifies that a parameter is deprecated and SHOULD be transitioned out of usage.
+        type: integer
+      allowEmptyValue:
+        description: Sets the ability to pass empty-valued parameters.
+        type: integer
+      style:
+        description: Describes how the parameter value will be serialized depending on the type of the parameter value.
+        type: string
+      explode:
+        description: When this is true, parameter values of type array or object generate separate parameters for each value of the array or key-value pair of the map.
+        type: integer
+      allowReserved:
+        description: Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986
+        type: integer
+      schema:
+        description: Example of the media type.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+      examples:
+        description: Examples of the media type.
+        type: "object"
+        items:
+          $ref: "#/definitions/example"
+  example:
+    description: The example object.
+    properties:
+      summary:
+        description: Short description for the example.
+        type: string
+      description:
+        description: Long description for the example.
+        type: string
+      value:
+        description: Any  Embedded literal example.
+        type: string
+      externalValue:
+        description: A URL that points to the literal example.
+        type: string
+  requestBody:
+    description: The requestBody object.
+    properties:
+      summary:
+        description: Short description for the example.
+        type: string
+      content:
+        description: The content of the request body.
+        type: "object"
+        items:
+          $ref: "#/definitions/mediaType"
+      required:
+        description: Determines if the request body is required in the request.
+        type: integer
+  header:
+    description: The header object.
+    properties:
+      name:
+        description: The name of the parameter. Parameter names are case sensitive.
+        type: string
+      in:
+        description: The location of the parameter. Possible values are only "header".
+        type: string
+      description:
+        description: A brief description of the parameter.
+        type: string
+      required:
+        description: Determines whether this parameter is mandatory.
+        type: integer
+      deprecated:
+        description: Specifies that a parameter is deprecated and SHOULD be transitioned out of usage.
+        type: integer
+      allowEmptyValue:
+        description: Sets the ability to pass empty-valued parameters.
+        type: integer
+      style:
+        description: Describes how the parameter value will be serialized depending on the type of the parameter value.
+        type: string
+      explode:
+        description: When this is true, parameter values of type array or object generate separate parameters for each value of the array or key-value pair of the map.
+        type: integer
+      allowReserved:
+        description: Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986
+        type: integer
+      schema:
+        description: Example of the media type.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+      examples:
+        description: Examples of the media type.
+        type: "object"
+        items:
+          $ref: "#/definitions/example"
+  link:
+    description: The link object.
+    properties:
+      operationRef:
+        description: A relative or absolute reference to an OAS operation.
+        type: string
+      operationId:
+        description: The name of an existing, resolvable OAS operation, as defined with a unique operationId.
+        type: string
+      parameters:
+        description: A map representing parameters to pass to an operation as specified with operationId or identified via operationRef.
+        type: string
+      requestBody:
+        description: A literal value or {expression} to use as a request body when calling the target operation.
+        type: string
+      description  :
+        description: A description of the link.
+        type: string
+      server:
+        description: A server object to be used by the target operation.
+        type: "object"
+        items:
+          $ref: "#/definitions/server"
   callback:
+    description: The callback object.
     properties:
       expression:
+        description: A Path Item Object used to define a callback request and expected responses.
         type: "object"
-        description: "A Path Item Object used to define a callback request and expected\
-          \ responses."
-        properties: {}
-    description: "The callback object."
-  ArrayOferror:
-    type: "array"
-    items:
-      $ref: "#/definitions/error"
-  user:
+        items:
+          $ref: "#/definitions/pathItem"
+  contact:
+    description: Contact information for this contract.
     properties:
       name:
-        type: "string"
-        description: "The name of the user."
-      description:
-        type: "string"
-        description: "The description of the user."
-    description: "Organizatns for managing collections and contracts."
-  queue:
+        description: The identifying name of the contact person/organization.
+        type: string
+      url:
+        description: The URL pointing to the contact information. MUST be in the format of a URL.
+        type: string
+      email:
+        description: The email address of the contact person/organization. MUST be in the format of an email address.
+        type: string
+  license:
+    description: License information for this contract.
     properties:
-      openapi_id:
+      name:
+        description: The license name used for the API.
+        type: string
+      url:
+        description: A URL to the license used for the API. MUST be in the format of a URL.
+        type: string
+  serverVariable:
+    description: The contact object.
+    properties:
+      description:
+        description: An optional description for the server variable.
+        type: string
+      default:
+        description: The default value to use for substitution, and to send, if an alternate value is not supplied.
+        type: string
+      enum:
+        description: An enumeration of string values to be used if the substitution options are from a limited set.
+        type: string
+  requestBody:
+    description: The contact object.
+    properties:
+      description:
+        description: A brief description of the request body.
+        type: string
+      content:
+        description: The content of the request body.
+        type: "object"
+        items:
+          $ref: "#/definitions/mediaType"
+      required:
+        description: Determines if the request body is required in the request. Defaults to false.
+        type: integer
+  securityScheme:
+    description: The contact object.
+    properties:
+      type:
+        description: The type of the security scheme. Valid values are "apiKey", "http", "oauth2", "openIdConnect".
+        type: string
+      description:
+        description: A short description for security scheme.
+        type: string
+      name:
+        description: The name of the header, query or cookie parameter to be used.
+        type: string
+      in:
+        description: The location of the API key. Valid values are "query", "header" or "cookie".
+        type: string
+      scheme:
+        description: The name of the HTTP Authorization scheme to be used in the Authorization header as defined in RFC7235.
+        type: string
+      bearerFormat:
+        description: A hint to the client to identify how the bearer token is formatted. Bearer tokens are usually generated by an authorization server, so this information is primarily for documentation purposes.
+        type: string
+      flows:
+        description: An object containing configuration information for the flow types supported.
+        type: string
+      openIdConnectUrl:
+        description: OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL.
+        type: string
+  mediaType:
+    description: The media type object.
+    properties:
+      schema:
+        description: The schema defining the type used for the request body.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+      example:
+        description: Example of the media type.
+        type: "object"
+      examples:
+        description: Examples of the media type.
+        type: "object"
+        items:
+          $ref: "#/definitions/example"
+      encoding:
+        description: A map between a property name and its encoding information.
+        type: "object"
+        items:
+          $ref: "#/definitions/encoding"
+  encoding:
+    description:  single encoding definition applied to a single schema property.
+    properties:
+      contentType:
+        description: The Content-Type for encoding a specific property.
+        type: "string"
+      headers:
+        description: The schema defining the type used for the request body.
+        type: "object"
+        items:
+          $ref: "#/definitions/schema"
+      style:
+        description: Describes how a specific property value will be serialized depending on its type.
+        type: "string"
+      explode:
+        description: When this is true, property values of type array or object generate separate parameters for each value of the array, or key-value-pair of the map.
         type: "integer"
-        description: "The unique id for the OpenAPI signal."
-    description: "Individual server object."
+      allowReserved:
+        description: Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986
+        type: "integer"
+  enum:
+    description: The enum object.
+    properties:
+      value:
+        description: The enum value.
+        type: string
+  error:
+    description: 'Describes an HTTP error returned'
+    properties:
+      code:
+        description: 'Repeat the HTTP status code'
+        type: integer
+      message:
+        description: 'A plain language message explaining the error'
+        type: integer
