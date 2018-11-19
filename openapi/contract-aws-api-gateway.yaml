@@ -6496,3 +6496,38 @@ definitions:
         type: "integer"
         description: "The unique id for the OpenAPI signal."
     description: "Individual server object."
+tags:
+  - name: Collections
+  - name: Collection APIs
+  - name: Collection API Properties
+  - name: Collection API Tags
+  - name: Collection Tags
+  - name: Collection Publish
+  - name: Contracts
+  - name: Contract Info
+  - name: Contract Info Contact
+  - name: Contract Info License
+  - name: Contract Paths
+  - name: Contract Publish
+  - name: Contract Servers
+  - name: Contract Tags
+  - name: Contract Component Callbacks
+  - name: Contract Component Examples
+  - name: Contract Component Headers
+  - name: Contract Component Links
+  - name: Contract Component Parameters
+  - name: Contract Component Paths
+  - name: Contract Component Path Operations
+  - name: Contract Component Request Bodies
+  - name: Contract Component Responses
+  - name: Contract Component Schemas
+  - name: Contract Component Security Schemes
+  - name: Examples
+  - name: Intake
+  - name: Organizations
+  - name: Parameters
+  - name: Property Types
+  - name: Request Bodies
+  - name: Responses
+  - name: Tags
+  - name: Users
