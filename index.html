@@ -54,14 +54,13 @@ title: Streamdata.io Discover - Developer
 <!--Leading Topics--->
 <section class="industriesPanel">
   <h2 class="industriesPanel__header">{{ page.title }}</h2>
-  <p class="industriesPanel__body">This is the developer portal for the Streamdata.io Discover product.</p>
+  <p class="industriesPanel__body">This is the developer portal for the Streamdata.io Discover product, providing a set of APIs for managing API collections, contracs, and the components that go into managing API discovery at scale across the enterprise.</p>
   <div class="industriesPanel__container">
 
     <div id="sdio-discover"></div>
     <script>
     window.onload = function() {
 
-      // HSDS
       const sdio_discover = SwaggerUIBundle({
         url: "http://discover.developer.streamdata.io/openapi/contract-aws-api-gateway.yaml",
         dom_id: '#sdio-discover',
@@ -74,11 +73,9 @@ title: Streamdata.io Discover - Developer
         ],
         layout: "StandaloneLayout"
       })
-      window.ui = hsda_full_ui;
+      window.ui = sdio_discover;
 
     </script>
-
-
 
   </div>
 </section>
