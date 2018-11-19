@@ -27,7 +27,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-get.php"
+        uri: "/discover/collections-get.php"
         responses:
           default:
             statusCode: "200"
@@ -49,7 +49,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-post.php"
+        uri: "/discover/collections-post.php"
         responses:
           default:
             statusCode: "200"
@@ -82,7 +82,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-get.php"
+        uri: "/discover/collections-collection_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -123,7 +123,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-put.php"
+        uri: "/discover/collections-collection_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -157,7 +157,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-delete.php"
+        uri: "/discover/collections-collection_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -192,7 +192,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-get.php"
+        uri: "/discover/collections-collection_id-apis-get.php"
         responses:
           default:
             statusCode: "200"
@@ -221,7 +221,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-post.php"
+        uri: "/discover/collections-collection_id-apis-post.php"
         responses:
           default:
             statusCode: "200"
@@ -260,7 +260,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-get.php"
+        uri: "/discover/collections-collection_id-apis-api_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -306,7 +306,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-put.php"
+        uri: "/discover/collections-collection_id-apis-api_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -345,7 +345,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-delete.php"
+        uri: "/discover/collections-collection_id-apis-api_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -385,7 +385,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-properties-get.php"
+        uri: "/discover/collections-collection_id-apis-api_id-properties-get.php"
         responses:
           default:
             statusCode: "200"
@@ -431,7 +431,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-properties-post.php"
+        uri: "/discover/collections-collection_id-apis-api_id-properties-post.php"
         responses:
           default:
             statusCode: "200"
@@ -475,7 +475,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-properties-property_id-get.php"
+        uri: "/discover/collections-collection_id-apis-api_id-properties-property_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -526,7 +526,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-properties-property_id-put.php"
+        uri: "/discover/collections-collection_id-apis-api_id-properties-property_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -570,7 +570,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-properties-property_id-delete.php"
+        uri: "/discover/collections-collection_id-apis-api_id-properties-property_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -611,7 +611,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-tags-get.php"
+        uri: "/discover/collections-collection_id-apis-api_id-tags-get.php"
         responses:
           default:
             statusCode: "200"
@@ -657,7 +657,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-tags-post.php"
+        uri: "/discover/collections-collection_id-apis-api_id-tags-post.php"
         responses:
           default:
             statusCode: "200"
@@ -701,7 +701,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-apis-api_id-tags-tag_id-delete.php"
+        uri: "/discover/collections-collection_id-apis-api_id-tags-tag_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -733,7 +733,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-publish-get.php"
+        uri: "/discover/collections-collection_id-publish-get.php"
         responses:
           default:
             statusCode: "200"
@@ -768,7 +768,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-tags-get.php"
+        uri: "/discover/collections-collection_id-tags-get.php"
         responses:
           default:
             statusCode: "200"
@@ -797,7 +797,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-tags-post.php"
+        uri: "/discover/collections-collection_id-tags-post.php"
         responses:
           default:
             statusCode: "200"
@@ -831,7 +831,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/collections-collection_id-tags-tag_id-delete.php"
+        uri: "/discover/collections-collection_id-tags-tag_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -867,7 +867,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-get.php"
+        uri: "/discover/contracts-get.php"
         responses:
           default:
             statusCode: "200"
@@ -906,7 +906,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-post.php"
+        uri: "/discover/contracts-post.php"
         responses:
           default:
             statusCode: "200"
@@ -939,7 +939,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-get.php"
+        uri: "/discover/contracts-contract_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -974,7 +974,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-callbacks-get.php"
+        uri: "/discover/contracts-contract_id-components-callbacks-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1001,7 +1001,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-callbacks-post.php"
+        uri: "/discover/contracts-contract_id-components-callbacks-post.php"
         responses:
           default:
             statusCode: "200"
@@ -1040,7 +1040,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-callbacks-callback_id-get.php"
+        uri: "/discover/contracts-contract_id-components-callbacks-callback_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1086,7 +1086,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-callbacks-callback_id-put.php"
+        uri: "/discover/contracts-contract_id-components-callbacks-callback_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -1125,7 +1125,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-callbacks-callback_id-delete.php"
+        uri: "/discover/contracts-contract_id-components-callbacks-callback_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -1161,7 +1161,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-examples-get.php"
+        uri: "/discover/contracts-contract_id-components-examples-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1188,7 +1188,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-examples-post.php"
+        uri: "/discover/contracts-contract_id-components-examples-post.php"
         responses:
           default:
             statusCode: "200"
@@ -1227,7 +1227,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-examples-example_id-get.php"
+        uri: "/discover/contracts-contract_id-components-examples-example_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1273,7 +1273,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-examples-example_id-put.php"
+        uri: "/discover/contracts-contract_id-components-examples-example_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -1312,7 +1312,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-examples-example_id-delete.php"
+        uri: "/discover/contracts-contract_id-components-examples-example_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -1348,7 +1348,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-headers-get.php"
+        uri: "/discover/contracts-contract_id-components-headers-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1375,7 +1375,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-headers-post.php"
+        uri: "/discover/contracts-contract_id-components-headers-post.php"
         responses:
           default:
             statusCode: "200"
@@ -1414,7 +1414,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-headers-header_id-get.php"
+        uri: "/discover/contracts-contract_id-components-headers-header_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1460,7 +1460,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-headers-header_id-put.php"
+        uri: "/discover/contracts-contract_id-components-headers-header_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -1499,7 +1499,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-headers-header_id-delete.php"
+        uri: "/discover/contracts-contract_id-components-headers-header_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -1535,7 +1535,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-links-get.php"
+        uri: "/discover/contracts-contract_id-components-links-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1562,7 +1562,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-links-post.php"
+        uri: "/discover/contracts-contract_id-components-links-post.php"
         responses:
           default:
             statusCode: "200"
@@ -1601,7 +1601,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-links-link_id-get.php"
+        uri: "/discover/contracts-contract_id-components-links-link_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1647,7 +1647,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-links-link_id-put.php"
+        uri: "/discover/contracts-contract_id-components-links-link_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -1686,7 +1686,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-links-link_id-delete.php"
+        uri: "/discover/contracts-contract_id-components-links-link_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -1722,7 +1722,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-parameters-get.php"
+        uri: "/discover/contracts-contract_id-components-parameters-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1749,7 +1749,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-parameters-post.php"
+        uri: "/discover/contracts-contract_id-components-parameters-post.php"
         responses:
           default:
             statusCode: "200"
@@ -1788,7 +1788,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-parameters-parameter_id-get.php"
+        uri: "/discover/contracts-contract_id-components-parameters-parameter_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1834,7 +1834,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-parameters-parameter_id-put.php"
+        uri: "/discover/contracts-contract_id-components-parameters-parameter_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -1873,7 +1873,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-parameters-parameter_id-delete.php"
+        uri: "/discover/contracts-contract_id-components-parameters-parameter_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -1902,7 +1902,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-paths-get.php"
+        uri: "/discover/contracts-contract_id-components-paths-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1929,7 +1929,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-paths-post.php"
+        uri: "/discover/contracts-contract_id-components-paths-post.php"
         responses:
           default:
             statusCode: "200"
@@ -1961,7 +1961,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-paths-path_id-get.php"
+        uri: "/discover/contracts-contract_id-components-paths-path_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -1993,7 +1993,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-paths-path_id-put.php"
+        uri: "/discover/contracts-contract_id-components-paths-path_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -2025,7 +2025,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-paths-path_id-delete.php"
+        uri: "/discover/contracts-contract_id-components-paths-path_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -2058,7 +2058,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-paths-path_id-path-items-path_item_id-operations-get.php"
+        uri: "/discover/contracts-contract_id-components-paths-path_id-path-items-path_item_id-operations-get.php"
         responses:
           default:
             statusCode: "200"
@@ -2095,7 +2095,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-paths-path_id-path-items-path_item_id-operations-operation-get.php"
+        uri: "/discover/contracts-contract_id-components-paths-path_id-path-items-path_item_id-operations-operation-get.php"
         responses:
           default:
             statusCode: "200"
@@ -2132,7 +2132,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-paths-path_id-path-items-path_item_id-operations-operation-post.php"
+        uri: "/discover/contracts-contract_id-components-paths-path_id-path-items-path_item_id-operations-operation-post.php"
         responses:
           default:
             statusCode: "200"
@@ -2169,7 +2169,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-paths-path_id-path-items-path_item_id-operations-operation-put.php"
+        uri: "/discover/contracts-contract_id-components-paths-path_id-path-items-path_item_id-operations-operation-put.php"
         responses:
           default:
             statusCode: "200"
@@ -2206,7 +2206,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-paths-path_id-path-items-path_item_id-operations-operation-delete.php"
+        uri: "/discover/contracts-contract_id-components-paths-path_id-path-items-path_item_id-operations-operation-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -2243,7 +2243,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-request-bodies-get.php"
+        uri: "/discover/contracts-contract_id-components-request-bodies-get.php"
         responses:
           default:
             statusCode: "200"
@@ -2270,7 +2270,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-request-bodies-post.php"
+        uri: "/discover/contracts-contract_id-components-request-bodies-post.php"
         responses:
           default:
             statusCode: "200"
@@ -2309,7 +2309,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-request-bodies-request_body_id-get.php"
+        uri: "/discover/contracts-contract_id-components-request-bodies-request_body_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -2355,7 +2355,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-request-bodies-request_body_id-put.php"
+        uri: "/discover/contracts-contract_id-components-request-bodies-request_body_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -2394,7 +2394,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-request-bodies-request_body_id-delete.php"
+        uri: "/discover/contracts-contract_id-components-request-bodies-request_body_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -2430,7 +2430,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-responses-get.php"
+        uri: "/discover/contracts-contract_id-components-responses-get.php"
         responses:
           default:
             statusCode: "200"
@@ -2457,7 +2457,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-responses-post.php"
+        uri: "/discover/contracts-contract_id-components-responses-post.php"
         responses:
           default:
             statusCode: "200"
@@ -2496,7 +2496,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-responses-response_id-get.php"
+        uri: "/discover/contracts-contract_id-components-responses-response_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -2542,7 +2542,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-responses-response_id-put.php"
+        uri: "/discover/contracts-contract_id-components-responses-response_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -2581,7 +2581,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-responses-response_id-delete.php"
+        uri: "/discover/contracts-contract_id-components-responses-response_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -2617,7 +2617,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-schemas-get.php"
+        uri: "/discover/contracts-contract_id-components-schemas-get.php"
         responses:
           default:
             statusCode: "200"
@@ -2658,7 +2658,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-schemas-post.php"
+        uri: "/discover/contracts-contract_id-components-schemas-post.php"
         responses:
           default:
             statusCode: "200"
@@ -2697,7 +2697,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-schemas-schema_id-get.php"
+        uri: "/discover/contracts-contract_id-components-schemas-schema_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -2743,7 +2743,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-schemas-schema_id-put.php"
+        uri: "/discover/contracts-contract_id-components-schemas-schema_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -2782,7 +2782,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-schemas-schema_id-delete.php"
+        uri: "/discover/contracts-contract_id-components-schemas-schema_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -2818,7 +2818,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-security-schemes-get.php"
+        uri: "/discover/contracts-contract_id-components-security-schemes-get.php"
         responses:
           default:
             statusCode: "200"
@@ -2845,7 +2845,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-security-schemes-post.php"
+        uri: "/discover/contracts-contract_id-components-security-schemes-post.php"
         responses:
           default:
             statusCode: "200"
@@ -2884,7 +2884,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-security-schemes-security_scheme_id-get.php"
+        uri: "/discover/contracts-contract_id-components-security-schemes-security_scheme_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -2930,7 +2930,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-security-schemes-security_scheme_id-put.php"
+        uri: "/discover/contracts-contract_id-components-security-schemes-security_scheme_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -2969,7 +2969,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-components-security-schemes-security_scheme_id-delete.php"
+        uri: "/discover/contracts-contract_id-components-security-schemes-security_scheme_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -3005,7 +3005,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-info-get.php"
+        uri: "/discover/contracts-contract_id-info-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3046,7 +3046,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-info-put.php"
+        uri: "/discover/contracts-contract_id-info-put.php"
         responses:
           default:
             statusCode: "200"
@@ -3081,7 +3081,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-info-contact-get.php"
+        uri: "/discover/contracts-contract_id-info-contact-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3122,7 +3122,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-info-contact-put.php"
+        uri: "/discover/contracts-contract_id-info-contact-put.php"
         responses:
           default:
             statusCode: "200"
@@ -3157,7 +3157,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-info-license-get.php"
+        uri: "/discover/contracts-contract_id-info-license-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3198,7 +3198,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-info-license-put.php"
+        uri: "/discover/contracts-contract_id-info-license-put.php"
         responses:
           default:
             statusCode: "200"
@@ -3233,7 +3233,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-paths-get.php"
+        uri: "/discover/contracts-contract_id-paths-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3269,7 +3269,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-paths-path_id-post.php"
+        uri: "/discover/contracts-contract_id-paths-path_id-post.php"
         responses:
           default:
             statusCode: "200"
@@ -3300,7 +3300,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-publish-get.php"
+        uri: "/discover/contracts-contract_id-publish-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3335,7 +3335,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-get.php"
+        uri: "/discover/contracts-contract_id-servers-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3376,7 +3376,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-post.php"
+        uri: "/discover/contracts-contract_id-servers-post.php"
         responses:
           default:
             statusCode: "200"
@@ -3408,7 +3408,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-get.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3440,7 +3440,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-put.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -3472,7 +3472,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-delete.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -3512,7 +3512,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-server-variables-get.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-server-variables-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3544,7 +3544,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-server-variables-post.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-server-variables-post.php"
         responses:
           default:
             statusCode: "200"
@@ -3588,7 +3588,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-get.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3639,7 +3639,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-put.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -3683,7 +3683,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-delete.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -3728,7 +3728,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-enums-get.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-enums-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3770,7 +3770,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-enums-enum-post.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-enums-enum-post.php"
         responses:
           default:
             statusCode: "200"
@@ -3819,7 +3819,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-enums-enum-delete.php"
+        uri: "/discover/contracts-contract_id-servers-server_id-server-variables-server_variable_id-enums-enum-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -3857,7 +3857,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-tags-get.php"
+        uri: "/discover/contracts-contract_id-tags-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3884,7 +3884,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-tags-post.php"
+        uri: "/discover/contracts-contract_id-tags-post.php"
         responses:
           default:
             statusCode: "200"
@@ -3916,7 +3916,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-tags-tag_id-put.php"
+        uri: "/discover/contracts-contract_id-tags-tag_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -3948,7 +3948,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/contracts-contract_id-tags-tag_id-delete.php"
+        uri: "/discover/contracts-contract_id-tags-tag_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -3979,7 +3979,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/examples-get.php"
+        uri: "/discover/examples-get.php"
         responses:
           default:
             statusCode: "200"
@@ -3999,7 +3999,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/examples-post.php"
+        uri: "/discover/examples-post.php"
         responses:
           default:
             statusCode: "200"
@@ -4032,7 +4032,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/examples-example_id-get.php"
+        uri: "/discover/examples-example_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4073,7 +4073,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/examples-example_id-put.php"
+        uri: "/discover/examples-example_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -4107,7 +4107,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/examples-example_id-delete.php"
+        uri: "/discover/examples-example_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -4137,7 +4137,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/headers-get.php"
+        uri: "/discover/headers-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4157,7 +4157,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/headers-post.php"
+        uri: "/discover/headers-post.php"
         responses:
           default:
             statusCode: "200"
@@ -4190,7 +4190,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/headers-header_id-get.php"
+        uri: "/discover/headers-header_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4231,7 +4231,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/headers-header_id-put.php"
+        uri: "/discover/headers-header_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -4265,7 +4265,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/headers-header_id-delete.php"
+        uri: "/discover/headers-header_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -4294,7 +4294,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-apis-json-get.php"
+        uri: "/discover/intake-apis-json-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4320,7 +4320,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-apis-json-post.php"
+        uri: "/discover/intake-apis-json-post.php"
         responses:
           default:
             statusCode: "200"
@@ -4353,7 +4353,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-openapi-2-get.php"
+        uri: "/discover/intake-openapi-2-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4388,7 +4388,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-openapi-2-post.php"
+        uri: "/discover/intake-openapi-2-post.php"
         responses:
           default:
             statusCode: "200"
@@ -4421,7 +4421,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-openapi-3-get.php"
+        uri: "/discover/intake-openapi-3-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4456,7 +4456,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-openapi-3-post.php"
+        uri: "/discover/intake-openapi-3-post.php"
         responses:
           default:
             statusCode: "200"
@@ -4484,7 +4484,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-queue-get.php"
+        uri: "/discover/intake-queue-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4517,7 +4517,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-queue-queue_id-get.php"
+        uri: "/discover/intake-queue-queue_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4558,7 +4558,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-queue-queue_id-put.php"
+        uri: "/discover/intake-queue-queue_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -4592,7 +4592,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-queue-queue_id-delete.php"
+        uri: "/discover/intake-queue-queue_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -4626,7 +4626,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/intake-queue-queue_id-process-get.php"
+        uri: "/discover/intake-queue-queue_id-process-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4656,7 +4656,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/organizations-get.php"
+        uri: "/discover/organizations-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4676,7 +4676,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/organizations-post.php"
+        uri: "/discover/organizations-post.php"
         responses:
           default:
             statusCode: "200"
@@ -4709,7 +4709,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/organizations-organization_id-get.php"
+        uri: "/discover/organizations-organization_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4750,7 +4750,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/organizations-organization_id-put.php"
+        uri: "/discover/organizations-organization_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -4784,7 +4784,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/organizations-organization_id-delete.php"
+        uri: "/discover/organizations-organization_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -4814,7 +4814,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/parameters-get.php"
+        uri: "/discover/parameters-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4834,7 +4834,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/parameters-post.php"
+        uri: "/discover/parameters-post.php"
         responses:
           default:
             statusCode: "200"
@@ -4867,7 +4867,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/parameters-parameter_id-get.php"
+        uri: "/discover/parameters-parameter_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4908,7 +4908,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/parameters-parameter_id-put.php"
+        uri: "/discover/parameters-parameter_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -4942,7 +4942,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/parameters-parameter_id-delete.php"
+        uri: "/discover/parameters-parameter_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -4972,7 +4972,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/property-types-get.php"
+        uri: "/discover/property-types-get.php"
         responses:
           default:
             statusCode: "200"
@@ -4994,7 +4994,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/property-types-post.php"
+        uri: "/discover/property-types-post.php"
         responses:
           default:
             statusCode: "200"
@@ -5027,7 +5027,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/property-types-property_type_id-get.php"
+        uri: "/discover/property-types-property_type_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -5068,7 +5068,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/property-types-property_type_id-put.php"
+        uri: "/discover/property-types-property_type_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -5102,7 +5102,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/property-types-property_type_id-delete.php"
+        uri: "/discover/property-types-property_type_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -5132,7 +5132,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/request-bodies-get.php"
+        uri: "/discover/request-bodies-get.php"
         responses:
           default:
             statusCode: "200"
@@ -5152,7 +5152,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/request-bodies-post.php"
+        uri: "/discover/request-bodies-post.php"
         responses:
           default:
             statusCode: "200"
@@ -5185,7 +5185,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/request-bodies-request_body_id-get.php"
+        uri: "/discover/request-bodies-request_body_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -5226,7 +5226,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/request-bodies-request_body_id-put.php"
+        uri: "/discover/request-bodies-request_body_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -5260,7 +5260,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/request-bodies-request_body_id-delete.php"
+        uri: "/discover/request-bodies-request_body_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -5290,7 +5290,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/responses-get.php"
+        uri: "/discover/responses-get.php"
         responses:
           default:
             statusCode: "200"
@@ -5310,7 +5310,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/responses-post.php"
+        uri: "/discover/responses-post.php"
         responses:
           default:
             statusCode: "200"
@@ -5343,7 +5343,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/responses-response_id-get.php"
+        uri: "/discover/responses-response_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -5384,7 +5384,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/responses-response_id-put.php"
+        uri: "/discover/responses-response_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -5418,7 +5418,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/responses-response_id-delete.php"
+        uri: "/discover/responses-response_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -5453,7 +5453,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/tags-get.php"
+        uri: "/discover/tags-get.php"
         responses:
           default:
             statusCode: "200"
@@ -5475,7 +5475,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/tags-post.php"
+        uri: "/discover/tags-post.php"
         responses:
           default:
             statusCode: "200"
@@ -5508,7 +5508,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/tags-tag_id-get.php"
+        uri: "/discover/tags-tag_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -5549,7 +5549,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/tags-tag_id-put.php"
+        uri: "/discover/tags-tag_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -5583,7 +5583,7 @@ paths:
       security:
       - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/tags-tag_id-delete.php"
+        uri: "/discover/tags-tag_id-delete.php"
         responses:
           default:
             statusCode: "200"
@@ -5613,7 +5613,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/users-get.php"
+        uri: "/discover/users-get.php"
         responses:
           default:
             statusCode: "200"
@@ -5633,7 +5633,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/users-post.php"
+        uri: "/discover/users-post.php"
         responses:
           default:
             statusCode: "200"
@@ -5666,7 +5666,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/users-user_id-get.php"
+        uri: "/discover/users-user_id-get.php"
         responses:
           default:
             statusCode: "200"
@@ -5707,7 +5707,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/users-user_id-put.php"
+        uri: "/discover/users-user_id-put.php"
         responses:
           default:
             statusCode: "200"
@@ -5741,7 +5741,7 @@ paths:
       security:
         - api_key: []
       x-amazon-apigateway-integration:
-        uri: "http://functions.laneworks.net/discover/users-user_id-delete.php"
+        uri: "/discover/users-user_id-delete.php"
         responses:
           default:
             statusCode: "200"
