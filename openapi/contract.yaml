@@ -18,7 +18,7 @@ schemes:
 produces:
 - application/json
 paths:
-  /contracts/:
+  /contracts:
     get:
       summary: OpenAPI Contracts
       description: Provides access to all the OpenAPI contracts in the system.
@@ -41,7 +41,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts
     post:
@@ -68,16 +68,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts
-  /contracts/{contract_id}/:
+  /contracts/{contract_id}:
     get:
       summary: Get Contract
       description: Gets a single contract using it's unique contract id.
@@ -100,10 +100,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts
-  /contracts/{contract_id}/info/:
+  /contracts/{contract_id}/info:
     get:
       summary: OpenAPIs Contract Info
       description: Retrieves the info for an OpenAPI contract.
@@ -126,7 +126,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Info
     put:
@@ -155,10 +155,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Info
-  /contracts/{contract_id}/info/contact/:
+  /contracts/{contract_id}/info/contact:
     get:
       summary: OpenAPIs Contract Info Contact
       description: Retrieves the info contact  for an OpenAPI contract.
@@ -181,7 +181,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Info
     put:
@@ -210,10 +210,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Info
-  /contracts/{contract_id}/info/license/:
+  /contracts/{contract_id}/info/license:
     get:
       summary: OpenAPIs Contract Info License
       description: Retrieves the info license  for an OpenAPI contract.
@@ -236,7 +236,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Info
     put:
@@ -265,10 +265,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Info
-  /contracts/{contract_id}/servers/:
+  /contracts/{contract_id}/servers:
     get:
       summary: OpenAPIs Contract Servers
       description: Retrieves the servers for an OpenAPI contract.
@@ -291,7 +291,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Servers
     post:
@@ -320,10 +320,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Servers
-  /contracts/{contract_id}/servers/{server_id}/variables/:
+  /contracts/{contract_id}/servers/{server_id}/variables:
     get:
       summary: OpenAPIs Contract Server Variables
       description: Retrieves the server variables for an OpenAPI contract.
@@ -345,16 +345,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/server_variable"
+              $ref: "#/definitions/serverVariable"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Servers
-  /contracts/{contract_id}/servers/{server_id}/variables/{variable_id}/:
+  /contracts/{contract_id}/servers/{server_id}/variables/{variable_id}:
     get:
       summary: OpenAPIs Contract Server Variable
       description: Retrieves a server variable for an OpenAPI contract.
@@ -381,13 +381,13 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/server_variable"
+              $ref: "#/definitions/serverVariable"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Servers
     put:
@@ -413,20 +413,20 @@ paths:
         - in: body
           name: body
           schema:
-            $ref: '#/definitions/server_variable'
+            $ref: '#/definitions/serverVariable'
       responses:
         '200':
           description: Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/server_variable"
+              $ref: "#/definitions/serverVariable"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Servers
     delete:
@@ -455,16 +455,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/server_variable"
+              $ref: "#/definitions/serverVariable"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Servers
-  /contracts/{contract_id}/servers/{server_id}/variables/{variable_id}/enums/:
+  /contracts/{contract_id}/servers/{server_id}/variables/{variable_id}/enums:
     get:
       summary: OpenAPIs Contract Server Variable Enums
       description: Retrieves server variable enums for an OpenAPI contract.
@@ -497,7 +497,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Servers
     post:
@@ -530,16 +530,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/server_variable"
+              $ref: "#/definitions/serverVariable"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Servers
-  /contracts/{contract_id}/servers/{server_id}/variables/{variable_id}/enums/{enum}/:
+  /contracts/{contract_id}/servers/{server_id}/variables/{variable_id}/enums/{enum}:
     put:
       summary: OpenAPIs Contract Server Variable Enums
       description: Retrieves server variable enums for an OpenAPI contract.
@@ -577,7 +577,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Servers
     delete:
@@ -617,10 +617,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Servers
-  /contracts/{contract_id}/components/:
+  /contracts/{contract_id}/components:
     get:
       summary: OpenAPIs Contract Components
       description: Retrieves the components for an OpenAPI contract.
@@ -643,10 +643,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/schemas/:
+  /contracts/{contract_id}/components/schemas:
     get:
       summary: OpenAPIs Contract Component Schemas
       description: Retrieves the component schemas for an OpenAPI contract.
@@ -669,7 +669,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     post:
@@ -698,10 +698,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/schemas/{schema_id}/:
+  /contracts/{contract_id}/components/schemas/{schema_id}:
     get:
       summary: Get OpenAPIs Contract Component Schema
       description: Retrieves an individual component schema for an OpenAPI contract.
@@ -729,7 +729,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     put:
@@ -763,7 +763,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     delete:
@@ -793,10 +793,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/responses/:
+  /contracts/{contract_id}/components/responses:
     get:
       summary: OpenAPIs Contract Component Responses
       description: Retrieves the component responses for an OpenAPI contract.
@@ -819,10 +819,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/responses/{response_id}/:
+  /contracts/{contract_id}/components/responses/{response_id}:
     get:
       summary: Get OpenAPIs Contract Component Response
       description: Retrieves an individual component response for an OpenAPI contract.
@@ -850,7 +850,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     put:
@@ -884,7 +884,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     delete:
@@ -914,10 +914,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/parameters/:
+  /contracts/{contract_id}/components/parameters:
     get:
       summary: OpenAPIs Contract Component Parameters
       description: Retrieves the component parameters for an OpenAPI contract.
@@ -940,10 +940,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/parameters/{parameter_id}/:
+  /contracts/{contract_id}/components/parameters/{parameter_id}:
     get:
       summary: Get OpenAPIs Contract Component Schema
       description: Retrieves an individual component parameter for an OpenAPI contract.
@@ -971,7 +971,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     put:
@@ -1005,7 +1005,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     delete:
@@ -1035,10 +1035,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/examples/:
+  /contracts/{contract_id}/components/examples:
     get:
       summary: OpenAPIs Contract Component Examples
       description: Retrieves the component examples for an OpenAPI contract.
@@ -1061,10 +1061,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/examples/{example_id}/:
+  /contracts/{contract_id}/components/examples/{example_id}:
     get:
       summary: Get OpenAPIs Contract Component Schema
       description: Retrieves an individual component example for an OpenAPI contract.
@@ -1092,7 +1092,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     put:
@@ -1126,7 +1126,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     delete:
@@ -1156,10 +1156,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/request-bodies/:
+  /contracts/{contract_id}/components/request-bodies:
     get:
       summary: OpenAPIs Contract Component Request Bodies
       description: Retrieves the component request bodies for an OpenAPI contract.
@@ -1182,10 +1182,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/request-bodies/{request_body_id}/:
+  /contracts/{contract_id}/components/request-bodies/{requestBody_id}:
     get:
       summary: Get OpenAPIs Contract Component Request Bodies
       description: Retrieves an individual component request body for an OpenAPI contract.
@@ -1199,7 +1199,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: request_body_id
+          name: requestBody_id
           description: The unique request body id.
       responses:
         '200':
@@ -1207,13 +1207,13 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/request_body"
+              $ref: "#/definitions/requestBody"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     put:
@@ -1229,25 +1229,25 @@ paths:
         - in: path
           required: true
           type: string
-          name: request_body_id
+          name: requestBody_id
           description: The unique request body id.
         - in: body
           name: body
           schema:
-            $ref: '#/definitions/request_body'
+            $ref: '#/definitions/requestBody'
       responses:
         '200':
           description: Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/request_body"
+              $ref: "#/definitions/requestBody"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     delete:
@@ -1263,7 +1263,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: request_body_id
+          name: requestBody_id
           description: The unique request body id.
       responses:
         '200':
@@ -1271,16 +1271,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/request_body"
+              $ref: "#/definitions/requestBody"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/headers/:
+  /contracts/{contract_id}/components/headers:
     get:
       summary: OpenAPIs Contract Component Headers
       description: Retrieves the component headers for an OpenAPI contract.
@@ -1303,10 +1303,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/headers/{header_id}/:
+  /contracts/{contract_id}/components/headers/{header_id}:
     get:
       summary: Get OpenAPIs Contract Component Headers
       description: Retrieves an individual component header for an OpenAPI contract.
@@ -1334,7 +1334,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     put:
@@ -1368,7 +1368,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     delete:
@@ -1398,10 +1398,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/security-schemes/:
+  /contracts/{contract_id}/components/security-schemes:
     get:
       summary: OpenAPIs Contract Component Security Schemes
       description: Retrieves the component security schemes for an OpenAPI contract.
@@ -1418,16 +1418,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/security_scheme"
+              $ref: "#/definitions/securityScheme"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/security-schemes/{security_scheme_id}/:
+  /contracts/{contract_id}/components/security-schemes/{securityScheme_id}:
     get:
       summary: Get OpenAPIs Contract Component Security Schemes
       description: Retrieves an individual component security scheme for an OpenAPI contract.
@@ -1441,7 +1441,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: security_scheme_id
+          name: securityScheme_id
           description: The unique security scheme id.
       responses:
         '200':
@@ -1449,13 +1449,13 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/security_scheme"
+              $ref: "#/definitions/securityScheme"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     put:
@@ -1471,25 +1471,25 @@ paths:
         - in: path
           required: true
           type: string
-          name: security_scheme_id
+          name: securityScheme_id
           description: The unique security scheme id.
         - in: body
           name: body
           schema:
-            $ref: '#/definitions/security_scheme'
+            $ref: '#/definitions/securityScheme'
       responses:
         '200':
           description: Success Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/security_scheme"
+              $ref: "#/definitions/securityScheme"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     delete:
@@ -1505,7 +1505,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: security_scheme_id
+          name: securityScheme_id
           description: The unique security scheme id.
       responses:
         '200':
@@ -1513,16 +1513,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/security_scheme"
+              $ref: "#/definitions/securityScheme"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/links/:
+  /contracts/{contract_id}/components/links:
     get:
       summary: OpenAPIs Contract Component Links
       description: Retrieves the component links for an OpenAPI contract.
@@ -1545,10 +1545,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/links/{link_id}/:
+  /contracts/{contract_id}/components/links/{link_id}:
     get:
       summary: Get OpenAPIs Contract Component Links
       description: Retrieves an individual component link for an OpenAPI contract.
@@ -1576,7 +1576,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     put:
@@ -1610,7 +1610,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     delete:
@@ -1640,10 +1640,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/callbacks/:
+  /contracts/{contract_id}/components/callbacks:
     get:
       summary: OpenAPIs Contract Component Callbacks
       description: Retrieves the component callbacks for an OpenAPI contract.
@@ -1666,10 +1666,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/components/callbacks/{callback_id}/:
+  /contracts/{contract_id}/components/callbacks/{callback_id}:
     get:
       summary: Get OpenAPIs Contract Component Callbacks
       description: Retrieves an individual component callback for an OpenAPI contract.
@@ -1697,7 +1697,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     put:
@@ -1731,7 +1731,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
     delete:
@@ -1761,10 +1761,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Components
-  /contracts/{contract_id}/paths/:
+  /contracts/{contract_id}/paths:
     get:
       summary: OpenAPIs Contract Paths
       description: Retrieves the paths for an OpenAPI contract.
@@ -1787,7 +1787,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     post:
@@ -1817,10 +1817,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/paths/{path_id}/:
+  /contracts/{contract_id}/paths/{path_id}:
     get:
       summary: Get OpenAPIs Contract Path
       description: Retrieves an individual path for an OpenAPI contract.
@@ -1848,7 +1848,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts
     put:
@@ -1882,7 +1882,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     delete:
@@ -1912,10 +1912,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items:
     get:
       summary: OpenAPIs Contract Path Items
       description: Retrieves the path items for an OpenAPI contract.
@@ -1937,13 +1937,13 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/path_item"
+              $ref: "#/definitions/pathItem"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     post:
@@ -1964,23 +1964,23 @@ paths:
         - in: body
           name: body
           schema:
-            $ref: '#/definitions/path_item'
+            $ref: '#/definitions/pathItem'
       responses:
         '200':
           description: Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/path_item"
+              $ref: "#/definitions/pathItem"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/{path_item_id}/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/{pathItem_id}:
     get:
       summary: Get OpenAPIs Contract Path Item
       description: Retrieves an individual path item for an OpenAPI contract.
@@ -1999,7 +1999,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
       responses:
         '200':
@@ -2007,13 +2007,13 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/path_item"
+              $ref: "#/definitions/pathItem"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     put:
@@ -2034,25 +2034,25 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: body
           name: body
           schema:
-            $ref: '#/definitions/path_item'
+            $ref: '#/definitions/pathItem'
       responses:
         '200':
           description: Success Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/path_item"
+              $ref: "#/definitions/pathItem"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     delete:
@@ -2073,7 +2073,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
       responses:
         '200':
@@ -2081,16 +2081,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/path_item"
+              $ref: "#/definitions/pathItem"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations:
     get:
       summary: OpenAPIs Contract Path Item Operations
       description: Retrieves the path item operations for an OpenAPI contract.
@@ -2118,7 +2118,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     post:
@@ -2146,16 +2146,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/path_item"
+              $ref: "#/definitions/pathItem"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/{path_item_id}/operations/{operation_id}/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/{pathItem_id}/operations/{operation_id}:
     get:
       summary: Get OpenAPIs Contract Path Item Operation
       description: Retrieves an individual path item operation for an OpenAPI contract.
@@ -2174,7 +2174,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2187,13 +2187,13 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/path_item"
+              $ref: "#/definitions/pathItem"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     put:
@@ -2214,7 +2214,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2237,7 +2237,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     delete:
@@ -2258,7 +2258,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2277,10 +2277,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/parameters/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/parameters:
     get:
       summary: OpenAPIs Contract Path Item Operation Parameters
       description: Retrieves the path item operation parameters for an OpenAPI contract.
@@ -2308,10 +2308,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/{path_item_id}/operations/{operation_id}/parameters/{parameter_id}/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/{pathItem_id}/operations/{operation_id}/parameters/{parameter_id}:
     get:
       summary: Get OpenAPIs Contract Path Item Operation Parameter
       description: Retrieves an individual path item operation parameter for an OpenAPI contract.
@@ -2330,7 +2330,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2354,7 +2354,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     post:
@@ -2375,7 +2375,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2399,7 +2399,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     put:
@@ -2420,7 +2420,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2444,7 +2444,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     delete:
@@ -2465,7 +2465,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2489,10 +2489,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/request-body/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/request-body:
     get:
       summary: OpenAPIs Contract Path Item Operation Request Body
       description: Retrieves the path item operation request body for an OpenAPI contract.
@@ -2514,16 +2514,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/request_body"
+              $ref: "#/definitions/requestBody"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/{path_item_id}/operations/{operation_id}/request-body/{request_body_id}/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/{pathItem_id}/operations/{operation_id}/request-body/{requestBody_id}:
     get:
       summary: Get OpenAPIs Contract Path Item Operation Request Body
       description: Retrieves an individual path item operation request body for an OpenAPI contract.
@@ -2542,7 +2542,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2552,7 +2552,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: request_body_id
+          name: requestBody_id
           description: The unique request body id.
       responses:
         '200':
@@ -2560,13 +2560,13 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/request_body"
+              $ref: "#/definitions/requestBody"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     post:
@@ -2587,7 +2587,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2597,7 +2597,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: request_body_id
+          name: requestBody_id
           description: The unique request body id.
       responses:
         '200':
@@ -2605,13 +2605,13 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/request_body"
+              $ref: "#/definitions/requestBody"
         '500':
           description: Error Response
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     put:
@@ -2632,7 +2632,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2642,7 +2642,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: request_body_id
+          name: requestBody_id
           description: The unique request body id.
       responses:
         '200':
@@ -2650,13 +2650,13 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/request_body"
+              $ref: "#/definitions/requestBody"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     delete:
@@ -2677,7 +2677,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2686,7 +2686,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: request_body_id
+          name: requestBody_id
           description: The unique request body id.
       responses:
         '200':
@@ -2694,16 +2694,16 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/request_body"
+              $ref: "#/definitions/requestBody"
         '500':
           description: Error Parameter
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/responses/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/responses:
     get:
       summary: OpenAPIs Contract Path Item Operation Responses
       description: Retrieves the path item operation responses for an OpenAPI contract.
@@ -2731,10 +2731,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/{path_item_id}/operations/{operation_id}/responses/{response_id}:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/{pathItem_id}/operations/{operation_id}/responses/{response_id}:
     get:
       summary: Get OpenAPIs Contract Path Item Operation Response
       description: Retrieves an individual path item operation response for an OpenAPI contract.
@@ -2753,7 +2753,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2777,7 +2777,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     post:
@@ -2798,7 +2798,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2822,7 +2822,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     put:
@@ -2843,7 +2843,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2867,7 +2867,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     delete:
@@ -2888,7 +2888,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2912,10 +2912,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/callbacks/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/callbacks:
     get:
       summary: OpenAPIs Contract Path Item Operation Callbacks
       description: Retrieves the path item operation callbacks for an OpenAPI contract.
@@ -2943,10 +2943,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/{path_item_id}/operations/{operation_id}/callbacks/{callback_id}/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/{pathItem_id}/operations/{operation_id}/callbacks/{callback_id}:
     get:
       summary: Get OpenAPIs Contract Path Item Operation Callback
       description: Retrieves an individual path item operation callback for an OpenAPI contract.
@@ -2965,7 +2965,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -2989,7 +2989,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     post:
@@ -3010,7 +3010,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3034,7 +3034,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     put:
@@ -3055,7 +3055,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3079,7 +3079,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     delete:
@@ -3100,7 +3100,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3124,10 +3124,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/security/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/security:
     get:
       summary: OpenAPIs Contract Path Item Operation Security
       description: Retrieves the path item operation security for an OpenAPI contract.
@@ -3155,10 +3155,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/{path_item_id}/operations/{operation_id}/security/{security_id}/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/{pathItem_id}/operations/{operation_id}/security/{security_id}:
     get:
       summary: Get OpenAPIs Contract Path Item Operation Security
       description: Retrieves an individual path item operation security for an OpenAPI contract.
@@ -3177,7 +3177,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3201,7 +3201,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     post:
@@ -3222,7 +3222,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3246,7 +3246,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     put:
@@ -3267,7 +3267,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3291,7 +3291,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     delete:
@@ -3312,7 +3312,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3336,10 +3336,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/servers/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/operations/servers:
     get:
       summary: OpenAPIs Contract Path Item Operation Servers
       description: Retrieves the path item operation servers for an OpenAPI contract.
@@ -3367,10 +3367,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/components/paths/{path_id}/path-items/{path_item_id}/operations/{operation_id}/servers/{server_id}/:
+  /contracts/{contract_id}/components/paths/{path_id}/path-items/{pathItem_id}/operations/{operation_id}/servers/{server_id}:
     get:
       summary: Get OpenAPIs Contract Path Item Operation Server
       description: Retrieves an individual path item operation server for an OpenAPI contract.
@@ -3389,7 +3389,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3413,7 +3413,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     post:
@@ -3434,7 +3434,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3458,7 +3458,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     put:
@@ -3479,7 +3479,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3503,7 +3503,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
     delete:
@@ -3524,7 +3524,7 @@ paths:
         - in: path
           required: true
           type: string
-          name: path_item_id
+          name: pathItem_id
           description: The unique path item id.
         - in: path
           required: true
@@ -3548,10 +3548,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Paths
-  /contracts/{contract_id}/security/:
+  /contracts/{contract_id}/security:
     get:
       summary: OpenAPIs Contract Security
       description: Retrieves the security for an OpenAPI contract.
@@ -3574,10 +3574,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Security
-  /contracts/{contract_id}/tags/:
+  /contracts/{contract_id}/tags:
     get:
       summary: OpenAPIs Contract Tags
       description: Retrieves the tags for an OpenAPI contract.
@@ -3600,7 +3600,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/error_response"
+              $ref: "#/definitions/error"
       tags:
       - Contracts Tags
 securityDefinitions:
@@ -3684,8 +3684,8 @@ definitions:
         description: The path.
         type: "object"
         items:
-          $ref: "#/definitions/path_item"
-  path_item:
+          $ref: "#/definitions/pathItem"
+  pathItem:
     description: Individual path item.
     properties:
       path:
@@ -3717,7 +3717,7 @@ definitions:
         type: object
         title: The request bodies for this operation.
         items:
-          $ref: "#/definitions/request_body"
+          $ref: "#/definitions/requestBody"
       responses:
         type: object
         title: The responses for this operation.
@@ -3727,7 +3727,7 @@ definitions:
         type: array
         title: The security scheme.
         items:
-          $ref: "#/definitions/security_scheme"
+          $ref: "#/definitions/securityScheme"
   component:
     description: The server object.
     properties:
@@ -3765,7 +3765,7 @@ definitions:
         description: The server object.
         type: "array"
         items:
-          $ref: "#/definitions/security_scheme"
+          $ref: "#/definitions/securityScheme"
       links:
         description: The server object.
         type: "array"
@@ -3910,7 +3910,7 @@ definitions:
         description: The content for the response.
         type: "object"
         items:
-          $ref: "#/definitions/media_type"
+          $ref: "#/definitions/mediaType"
       links:
         description: The links for the response.
         type: "object"
@@ -3981,7 +3981,7 @@ definitions:
         description: The content of the request body.
         type: "object"
         items:
-          $ref: "#/definitions/media_type"
+          $ref: "#/definitions/mediaType"
       required:
         description: Determines if the request body is required in the request.
         type: integer
@@ -4055,7 +4055,7 @@ definitions:
         description: A Path Item Object used to define a callback request and expected responses.
         type: "object"
         items:
-          $ref: "#/definitions/path_item"
+          $ref: "#/definitions/pathItem"
   contact:
     description: Contact information for this contract.
     properties:
@@ -4077,7 +4077,7 @@ definitions:
       url:
         description: A URL to the license used for the API. MUST be in the format of a URL.
         type: string
-  server_variable:
+  serverVariable:
     description: The contact object.
     properties:
       description:
@@ -4089,7 +4089,7 @@ definitions:
       enum:
         description: An enumeration of string values to be used if the substitution options are from a limited set.
         type: string
-  request_body:
+  requestBody:
     description: The contact object.
     properties:
       description:
@@ -4099,11 +4099,11 @@ definitions:
         description: The content of the request body.
         type: "object"
         items:
-          $ref: "#/definitions/media_type"
+          $ref: "#/definitions/mediaType"
       required:
         description: Determines if the request body is required in the request. Defaults to false.
         type: integer
-  security_scheme:
+  securityScheme:
     description: The contact object.
     properties:
       type:
@@ -4130,7 +4130,7 @@ definitions:
       openIdConnectUrl:
         description: OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL.
         type: string
-  media_type:
+  mediaType:
     description: The media type object.
     properties:
       schema:
@@ -4177,7 +4177,7 @@ definitions:
       value:
         description: The enum value.
         type: string
-  error_response:
+  error:
     description: 'Describes an HTTP error returned'
     properties:
       code:

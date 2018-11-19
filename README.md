@@ -1,5 +1,5 @@
-#Streamdata API Gallery
+#Streamdata Discover - Developer
 
-This is a gallery of APIs organized by Streamdata.io.
+This is the developer area for a discovery solution from Streamdata.io.
 
-You can view at: http://api.gallery.streamdata.io.
+You can view at: http://discover.developer.streamdata.io.
